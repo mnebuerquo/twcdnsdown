@@ -9,10 +9,8 @@ DNS server (8.8.8.8) for my network. I have three severs and they should
 be pretty reliable.
 
 Now I'm writing a program to run in my crontab to monitor the TWC DNS
-servers and automatically report outages on twitter and log them.
-
-I don't expect this to change anything about the TWC service. I'm
-already switched over to OpenDNS. This is mostly for my amusement.
+servers and automatically log outages. I was initially intending to 
+auto-tweet the downtime, but that might be a bit much.
 
 # TWC DNS Server Addresses
 
@@ -24,7 +22,11 @@ https://business.timewarnercable.com/support/resources/internet/dns/server_addre
 
 # My Script
 
-This script is written on Node.js, using the built-in dns library.
-Additionally there is a twitter library on NPM. 
+This script is written on Node.js, using the built-in dns library. 
+Node's `dns` module has one issue with switching nameservers after
+making a query. It's a known issue and is easy to work around.
 
+After hitting the server switching issue in Node's dns, I tried out 
+`native-dns` but there were some issues with that one that I
+didn't want to work around.
 
