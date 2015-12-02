@@ -1,0 +1,28 @@
+{
+  "name": "twcdnsdown",
+  "version": "1.0.0",
+  "description": "A simple program to monitor and report DNS outages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mnebuerquo/twcdnsdown.git"
+  },
+  "keywords": [
+    "dns",
+    "twitter"
+  ],
+  "author": "Mnebuerquo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnebuerquo/twcdnsdown/issues"
+  },
+  "homepage": "https://github.com/mnebuerquo/twcdnsdown#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "native-dns": "^0.7.0",
+    "twitter": "^1.2.5"
+  }
+}
